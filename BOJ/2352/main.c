@@ -3,7 +3,7 @@
 
 int m, n, size=0, inp[max], lis[max];
 
-int lowerbound(int s, int e, int k){
+int lowerbound(int s, int e, int k){ 
     while(s<e){
         m=(s+e)/2;
         if(lis[m]>=k) e=m;
@@ -14,11 +14,13 @@ int lowerbound(int s, int e, int k){
 }
 
 int main(){
-    scanf("%d", &n);
+    scanf("%d", &n); 
 
     for(int i=0; i<n; i++){
         scanf("%d", inp[i]);
         int temp = lowerbound(0, size, inp[i]);
-        
+        lis[temp] = inp[i];
+        if(temp == size) size++;
     }
+    printf("%d ", size);
 }
