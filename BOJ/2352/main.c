@@ -1,5 +1,5 @@
 #include <stdio.h>
-#define max 40100
+#define max 40000
 
 int m, n, size=0, inp[max], lis[max];
 
