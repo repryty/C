@@ -11,7 +11,8 @@
             "args": [
                 "${file}",
                 "-o",
-                "${fileDirname}/${fileBasenameNoExtension}"
+                "${fileDirname}/${fileBasenameNoExtension}",
+                "-lstdc++"
             ],
             "group": "build",
             "problemMatcher": {
@@ -65,13 +66,14 @@
         {
             "type": "cppbuild",
             "label": "C/C++: gcc.exe 활성 파일 빌드",
-            "command": "C:/mingw/bin/gcc.exe",
+            "command": "C:/mingw/bin/g++.exe",
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
                 "${file}",
                 "-o",
-                "${fileDirname}\\${fileBasenameNoExtension}.exe"
+                "${fileDirname}\\${fileBasenameNoExtension}.exe"//,
+                //"-lstdc++"
             ],
             "options": {
                 "cwd": "C:/mingw/bin"
